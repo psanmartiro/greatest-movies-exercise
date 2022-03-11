@@ -5,12 +5,31 @@
 // Retorna un array amb tots els directors.
 // BONUS: Sembla que molts directors han fet diverses pel·lícules. Com podríem "netejar" aquest
 // array per eliminar els duplicats?
-function getAllDirectors(movies) {}
+function getAllDirectors(movies) {
+  return movies.map((movie) => {
+    return movie.director;
+  });
+}
 
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct?
 // --- CATALÀ ---
 // Steven Spielberg. És el millor? - Quantes pelis de drama ha dirigit Steven Spielberg?
-function howManyMovies(movies) {}
+function howManyMovies(movies) {
+  return movies.filter((movie) => {
+    return (
+      movie.genre.includes('Drama') && movie.director === 'Steven Spielberg'
+    );
+  }).length;
+}
+/*
+const howManyMovies = (movies) => {
+  return movies.filter((movie) => {
+    return (
+      movie.genre.includes('Drama') && movie.director === 'Steven Spielberg'
+    );
+  }).length;
+};
+*/
 
 // Iteration 3: All scores average - Get the average of all scores with 2 decimals
 // --- CATALÀ ---
